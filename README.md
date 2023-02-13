@@ -1,5 +1,5 @@
 # Professional README Generator
-    <li class="badge-list-item"><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></li>
+
 <a name="description"></a>
 ## Description
 To quickly create a professional README for any new projects
@@ -13,22 +13,25 @@ To quickly create a professional README for any new projects
 
 <a name="installation"></a>
 ## Installation
-Download files locally and run the command "node index.js"
+Download files locally, and run the command "node index.js"
   
 <a name="usage"></a>
 ## Usage
-To have a quick readme file created that is professionally formatted
+To quickly generate a properly formatted README for any of their new projects
 <a name="contributing"></a>
 ## Contributing
-  Demo of contribution guidelines
+  Demo of where contribution guidelines will be
   
 <a name="tests"></a>
 ## Tests
-Demo of test instructions
+Demo of where test instructions will be
   
 <a name="license"></a>
 ## License
 This project is licensed under the MIT license.
+<ul>
+    <li class="badge-list-item"><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></li>
+</ul>
 
 <a name="questions"></a>
 ## Questions

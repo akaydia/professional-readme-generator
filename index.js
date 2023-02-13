@@ -78,9 +78,9 @@ let questions = [
 
 let licenseBadges = {
     'MIT': '<li class="badge-list-item"><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></li>',
-    'Apache 2.0': '<li class="badge-list-item"><a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="Apache 2.0 License"></a></li>',
-    'BSD 2-Clause': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/license-BSD%202--Clause-blue.svg" alt="BSD 2-Clause License"></a></li>',
-    'BSD 3-Clause': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/license-BSD%203--Clause-blue.svg" alt="BSD 3-Clause License"></a></li>',
+    'Apache License 2.0': '<li class="badge-list-item"><a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="Apache 2.0 License"></a></li>',
+    'BSD 2-Clause \'Simplified\' License': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/license-BSD%202--Clause-blue.svg" alt="BSD 2-Clause License"></a></li>',
+    'BSD 3-Clause \'New\' or \'Revised\' License': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/license-BSD%203--Clause-blue.svg" alt="BSD 3-Clause License"></a></li>',
 };
 
 // generateReadme
@@ -104,7 +104,7 @@ inquirer.prompt(questions).then(answers => {
     }
 
     let readme = `# ${answers.title}
-    ${licenseBadge}
+
 <a name="description"></a>
 ## Description
 ${answers.description}
@@ -125,6 +125,9 @@ ${answers.tests}
 <a name="license"></a>
 ## License
 This project is licensed under the ${answers.license} license.
+<ul>
+    ${licenseBadge}
+</ul>
 
 <a name="questions"></a>
 ## Questions
