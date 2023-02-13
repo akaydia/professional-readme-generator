@@ -65,7 +65,6 @@ let questions = [
         choices: [
             "MIT",
             "Apache License 2.0",
-            "GNU General Public License v3.0",
             "BSD 2-Clause 'Simplified' License",
             "BSD 3-Clause 'New' or 'Revised' License"
         ]
@@ -78,11 +77,10 @@ let questions = [
 ] // questions
 
 let licenseBadges = {
-    "MIT": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-    "Apache License 2.0": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-    "GNU General Public License v3.0": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
-    "BSD 2-Clause 'Simplified' License": "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
-    "BSD 3-Clause 'New' or 'Revised' License": "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    'MIT': '<li class="badge-list-item"><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></li>',
+    'Apache 2.0': '<li class="badge-list-item"><a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="Apache 2.0 License"></a></li>',
+    'BSD 2-Clause': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-2-Clause"><img src="https://img.shields.io/badge/license-BSD%202--Clause-blue.svg" alt="BSD 2-Clause License"></a></li>',
+    'BSD 3-Clause': '<li class="badge-list-item"><a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/license-BSD%203--Clause-blue.svg" alt="BSD 3-Clause License"></a></li>',
 };
 
 // generateReadme
@@ -107,6 +105,7 @@ inquirer.prompt(questions).then(answers => {
 
     let readme = `# ${answers.title}
     ${licenseBadge}
+<a name="description"></a>
 ## Description
 ${answers.description}
 ${tableOfContents}
@@ -131,12 +130,12 @@ This project is licensed under the ${answers.license} license.
 ## Questions
 If you have any questions about the repository, open an issue or contact me directly at [${answers.github}](https://github.com/${answers.github}) or by email at [${answers.email}](mailto:${answers.email}).`
 
-fs.writeFile("README.md", readme, function(err) {
-    if (err) {
-        return console.error(err);
-    }
-    console.log("README.md file created successfully");
-});
+    fs.writeFile("README.md", readme, function (err) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log("README.md file created successfully");
+    });
 
 }); // inquirer
 
